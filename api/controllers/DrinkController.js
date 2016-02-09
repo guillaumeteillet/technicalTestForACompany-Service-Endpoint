@@ -16,6 +16,17 @@ module.exports = {
 		});
 	},
 
+	update: function(req, res) {
+
+		Drink.update({name:req.body.name},{quantity:req.body.quantity}).exec(function afterwards(err, updated){
+			if (err) {
+	    	return res.negotiate(err);
+	  	}
+	  	console.log('Updated user to have name ' + updated[0].name);
+			return res.send(200, updated);
+		});
+	},
+
 	delete: function(req, res) {
 
 		Drink.destroy({name:req.body.name}).exec(function (err){
@@ -23,7 +34,7 @@ module.exports = {
     			return res.negotiate(err);
   		}
   		sails.log('Deleted drink');
-  		return res.ok();
+  		return res.send(200, 'The drink has been removed');
 		});
 	}
 };
