@@ -36,5 +36,15 @@ module.exports = {
   		sails.log('Deleted drink');
   		return res.send(200, 'The drink has been removed');
 		});
+	},
+
+	get: function(req, res) {
+
+		Drink.find({name:req.param('name')}).exec(function (err, quantity){
+		  if (err) {
+		    return res.negotiate(err);
+		  }
+		  return res.send(200, quantity);
+		});
 	}
 };
