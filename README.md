@@ -2,8 +2,8 @@
 
 ### Test
 
-Create an endpoint which will be accessible through a friendly route. (This can be hosted on your localhost at least for now). 
-     
+Create an endpoint which will be accessible through a friendly route. (This can be hosted on your localhost at least for now).
+
 The endpoint will work based on the following web requests:
 + Http Post request should adding a drink in to the list with quantity e.g. name of drink (Pepsi) and quantity (1)
 + Http Put request for updating a drinks quantity
@@ -14,11 +14,11 @@ The endpoint will work based on the following web requests:
 Notes:
 + This doesn’t have to use database you can use in memory solution to hold the shopping list. Any thing simple that works
 + Ideally it should contain one unique drink name for each entry to avoid repetitions
-+ Please feel free to implement/explain any advanced features to demonstrate your skills and experience such as paginated lists api authorisation and validation etc. 
++ Please feel free to implement/explain any advanced features to demonstrate your skills and experience such as paginated lists api authorisation and validation etc.
 
 ### How it works
 
-To execute this code, you need to install : 
+To execute this code, you need to install :
 
 1) **Node** : https://nodejs.org/en/
 
@@ -31,3 +31,20 @@ Then, you have to :
 2) cd technicalTestForCheckoutComService-Endpoint
 
 3) sails lift
+
+### Some explanations
+
+The interesting files are here :
++ api/controllers/DrinkController.js
++ api/models/Drink.js
++ config/routes.js
+
+You can have only one unique drink name for each entry.
+
+```javascript
+name: {
+type: 'string',
+unique: true,
+required: true,
+},
+```
