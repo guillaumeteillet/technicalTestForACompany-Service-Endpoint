@@ -46,5 +46,15 @@ module.exports = {
 		  }
 		  return res.send(200, quantity);
 		});
+	},
+
+	list: function(req, res) {
+
+		Drink.find({}).exec(function (err, list){
+		  if (err) {
+		    return res.negotiate(err);
+		  }
+		  return res.send(200, list);
+		});
 	}
 };

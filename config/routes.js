@@ -50,4 +50,5 @@ module.exports.routes = {
   'delete /delete': 'DrinkController.delete',
   'put /update': 'DrinkController.update',
   'get /get': 'DrinkController.get',
+  'get /list': 'DrinkController.list',
 };
