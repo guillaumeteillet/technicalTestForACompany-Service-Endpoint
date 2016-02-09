@@ -12,7 +12,18 @@ module.exports = {
 			if (err)
 					return res.send(500, err);
 			sails.log('Created drink with name ' + created.name + ' and quantity = ' + created.quantity);
-			res.send(200, created);
+			return res.send(200, created);
+		});
+	},
+
+	delete: function(req, res) {
+
+		Drink.destroy({name:req.body.name}).exec(function (err){
+  		if (err) {
+    			return res.negotiate(err);
+  		}
+  		sails.log('Deleted drink');
+  		return res.ok();
 		});
 	}
 };

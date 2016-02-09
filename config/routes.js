@@ -47,5 +47,6 @@ module.exports.routes = {
   ***************************************************************************/
 
   'post /create': 'DrinkController.create',
+  'delete /delete': 'DrinkController.delete',
 
 };
