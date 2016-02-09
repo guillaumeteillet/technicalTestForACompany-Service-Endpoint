@@ -8,7 +8,15 @@
 module.exports = {
 
   attributes: {
+    name: {
+    type: 'string',
+    unique: true,
+    required: true,
+  },
+  quantity: {
+    type: 'integer',
+    required: true,
+  },
 
   }
 };
-
