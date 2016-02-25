@@ -1,4 +1,4 @@
-# Service Endpoint : Technical Test for Checkout.com
+# Service Endpoint : Technical Test for a company
 
 ### Test
 
@@ -26,9 +26,9 @@ To execute this code, you need to install :
 
 Then, you have to :
 
-1) Clone the repo : git clone https://github.com/guillaumeteillet/technicalTestForCheckoutComService-Endpoint
+1) Clone the repo : git clone https://github.com/guillaumeteillet/technicalTestForACompany-Service-Endpoint
 
-2) cd technicalTestForCheckoutComService-Endpoint
+2) cd technicalTestForACompany-Service-Endpoint
 
 3) sails lift
 
